@@ -1,5 +1,22 @@
 from tabulate import tabulate
 
+'''
+module.py contain class Transaction
+this class has a function similar to a cart
+
+feature in Transaction class:
+- add_item(item_name, item_qty, item_price) : add item to class 
+- update_item_name (item_name, new_item_name) : change item naem
+- update_item_qty (item_name, new_qty) : change item's qty
+- update_item_price (item_name, new_price) : change item's price
+- delete_item (item_name) : deleting an item in the cart
+- reset_transaction () : delete all the item in cart
+- check_cart() : print a tabulated form of the cart (item name, qty, price)
+- check_order() : check_cart + total price per item and total cart price
+- calculate_total_price() : print only the total cart price (str)
+
+'''
+
 class Transaction:
     def __init__(self):
         self.cart = [] 
@@ -157,7 +174,7 @@ class Transaction:
         return:
         None
         '''
-        Transaction.calculate_total_price(self)
+        self.calculate_total_price()
         if self.total_price > 500_000:
             discount = 0.1
         elif self.total_price > 300_000:
@@ -167,26 +184,23 @@ class Transaction:
         else:
             discount = 0
         
-        print(f"Total belanjaan anda sebesar : Rp. {int(self.total_price * (1-discount))}")
+        print(f"Total belanja: Rp. {self.total_price}, Diskon sebesar : {int(discount*100)}%, Total yang harus dibayarkan sebesar : Rp. {int(self.total_price * (1-discount))}")
     
     def check_cart(self):
         '''
         This function print tabulated (grid) cart
         '''
         print(tabulate(self.cart, headers='keys', tablefmt='grid', intfmt=','))
-       
-        
-        
     
 
 if __name__ == '__main__':
     try:
         transaction123 = Transaction()
-        transaction123.add_item('Ayam','2','12000')
+        transaction123.add_item('Ayam','10','12000')
         transaction123.update_item_name('Ayam','Bebek')
-        transaction123.update_item_qty('Bebek','1')
-        transaction123.update_item_price('Bebek','14000')
-        transaction123.add_item('Ayam','3','10000')
+        transaction123.update_item_qty('Bebek','10')
+        transaction123.update_item_price('Bebek','19000')
+        transaction123.add_item('Ayam','20','10000')
         transaction123.check_cart()
         transaction123.check_order()
         transaction123.total_price()
