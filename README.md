@@ -50,6 +50,7 @@ output (check order):
 2. Penghapusan Item(delete_item):
 
 command input 3, input nama item(str):
+
 ![image](https://github.com/user-attachments/assets/679a8e0f-fc62-42ac-b78a-2db7eac64c36)
 
 output:
