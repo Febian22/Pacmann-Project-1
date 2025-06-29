@@ -14,7 +14,10 @@ Membuat program sederhana yang memiliki fungsi:
 ## Flowchart
 1. Pastikan main.py dan module.py berada pada folder yang sama
 2. jalankan main.py di terminal
-3. main.py akan berfungsi sebagai menu interaktif yang dapat menggunakan seluruh fungsi dari module.py
+3. masukkan command berdasarkan ketentuan dalam program (misal: 1 untuk add_item)
+4. masukkan input yang sesuai program minta, program akan selalu loop selama input yang dimasukkan tidak sesuai
+5. setelah item ditambahkan, program memiliki fungsi tambahan seperti update, delete, reset, check, dan checkout
+6. untuk menyelesaikan program command exit(0) atau checkout(6) harus dijalankan
 
 ## Functions
 ### module.py
