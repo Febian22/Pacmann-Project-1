@@ -74,6 +74,7 @@ kembali ke menu awal:
 4. checkout (Total_price):
 
 command input 6:
+
 ![image](https://github.com/user-attachments/assets/823d07a1-988a-49cc-97a8-7e04dded6a06)
 
 5. Update Item:
